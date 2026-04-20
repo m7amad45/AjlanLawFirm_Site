@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Languages, ArrowRight } from "lucide-react"; // ميزة 1: أيقونات جديدة
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
+import logo from "@/assets/logo.png";
 
 export const Navbar = () => {
   const { t, lang, toggle } = useLanguage();
@@ -33,7 +34,7 @@ export const Navbar = () => {
         {/* قسم اللوجو والنص */}
         <a href="#home" className="group flex items-center text-cream transition-all duration-500">
           <img 
-            src="src/assets/logo.png" 
+            src={logo} 
             alt="Ajlan Law Firm Logo" 
             className="h-32 w-auto object-contain z-10 transition-transform duration-500 group-hover:scale-95" 
           />
