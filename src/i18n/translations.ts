@@ -2,6 +2,7 @@ export type Lang = "en" | "ar";
 
 export const translations = {
   en: {
+    title: "ALF |Mohammed Ajlan Law Firm ",
     // Nav
     nav_home: "Home",
     nav_about: "About",
@@ -90,6 +91,7 @@ export const translations = {
     footer_tagline: "Three decades of legal mastery, refined by experience.",
   },
   ar: {
+    title: "مكتب محمد عجلان للمحاماة",
     nav_home: "الرئيسية",
     nav_about: "عن المكتب",
     nav_practice: "خدماتنا",
