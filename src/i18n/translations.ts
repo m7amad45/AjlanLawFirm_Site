@@ -2,7 +2,7 @@ export type Lang = "en" | "ar";
 
 export const translations = {
   en: {
-    title: "ALF |Mohammed Ajlan Law Firm ",
+    appTitle: "ALF |Mohammed Ajlan Law Firm ",
     // Nav
     nav_home: "Home",
     nav_about: "About",
@@ -91,7 +91,7 @@ export const translations = {
     footer_tagline: "Three decades of legal mastery, refined by experience.",
   },
   ar: {
-    title: "مكتب محمد عجلان للمحاماة",
+    appTitle: "مكتب محمد عجلان للمحاماة",
     nav_home: "الرئيسية",
     nav_about: "عن المكتب",
     nav_practice: "خدماتنا",
@@ -143,11 +143,11 @@ export const translations = {
     team_title: "تعرّف على فريقنا",
     team_subtitle: "نخبة من المستشارين والمحامين الملتزمين بتحقيق نجاحكم.",
     team_member_1_name: "الأستاذ / محمد عبدالله عجلان",
-    team_member_1_role: "الشريك المؤسس والمدير العامالشريك المؤسس والمدير العام - ماجستير قانون من جامعة بوسطن",
+    team_member_1_role: "الشريك المؤسس والمدير العام - ماجستير قانون من جامعة بوسطن",
     team_member_2_name: "المستشار / أسامة الجوهري",
     team_member_2_role: "مستشار قانوني أول - متخصص في صياغة العقود واللوائح",
     team_member_3_name: "الأستاذ / محمد عرفان",
-    team_member_3_role: "مدير إدارة العقود - متخصص في نزاعات الشركات والتركات",
+    team_member_3_role: "مستشار - متخصص في نزاعات الشركات والتركات",
 
     contact_eyebrow: "تواصل معنا",
     contact_title: "اطلب استشارة سرّية",

@@ -80,6 +80,12 @@ export const Footer = () => {
                   <a href="https://wa.me/966126596999" target="_blank" rel="noreferrer" dir="ltr" className="text-cream/90 hover:text-gold transition-colors font-medium">
                     +966 12 659 6999
                   </a>
+                  <a href="https://wa.me/966505626810" target="_blank" rel="noreferrer" dir="ltr" className="text-cream/90 hover:text-gold transition-colors font-medium">
+    +966 50 562 6810
+  </a>
+  <a href="https://wa.me/966550092012" target="_blank" rel="noreferrer" dir="ltr" className="text-cream/90 hover:text-gold transition-colors font-medium">
+    +966 55 009 2012
+  </a>
                 </div>
               </div>
             </div>

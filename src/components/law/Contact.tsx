@@ -23,8 +23,18 @@ export const Contact = () => {
 
   const info = [
     { icon: MapPin, label: t("contact_info_address"), value: t("contact_address_value") },
-    { icon: Phone, label: t("contact_info_phone"), value: "\u202A+966 55 009 2012\u202C" },
-    { icon: Mail, label: t("contact_info_email"), value: "ajlanlaw@gmail.com" },
+{ 
+  icon: Phone, 
+  label: t("contact_info_phone"), 
+  value: (
+    <div className="flex flex-col gap-1">
+      <span dir="ltr">+966 12 659 6999</span>
+      <span dir="ltr">+966 50 562 6810</span>
+      <span dir="ltr">+966 55 009 2012</span>
+    </div>
+  ) 
+}, 
+   { icon: Mail, label: t("contact_info_email"), value: "ajlanlaw@gmail.com" },
     { icon: Clock, label: t("contact_info_hours"), value: t("contact_hours_value") },
   ];
 
