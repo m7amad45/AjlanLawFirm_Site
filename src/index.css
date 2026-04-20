@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Black & Gold luxury law firm palette */
+    --background: 0 0% 5%;
+    --foreground: 40 30% 92%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 40 30% 92%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 40 30% 92%;
+
+    --primary: 0 0% 4%;
+    --primary-foreground: 42 65% 60%;
+
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 42 55% 60%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 40 10% 68%;
+
+    --accent: 42 65% 55%;
+    --accent-foreground: 0 0% 4%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 42 25% 16%;
+    --input: 0 0% 14%;
+    --ring: 42 65% 55%;
+
+    --radius: 0.25rem;
+
+    /* Custom luxury tokens — black & gold */
+    --gold: 42 68% 58%;
+    --gold-light: 42 78% 72%;
+    --gold-dark: 38 55% 42%;
+    --navy: 0 0% 5%;        /* aliased to black for backwards compat */
+    --navy-deep: 0 0% 0%;
+    --cream: 40 35% 94%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(0 0% 5%) 55%, hsl(0 0% 10%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(42 78% 65%), hsl(38 55% 42%));
+    --gradient-overlay: linear-gradient(180deg, hsl(0 0% 4% / 0.82), hsl(0 0% 0% / 0.95));
+
+    --shadow-luxury: 0 25px 60px -20px hsl(0 0% 0% / 0.7);
+    --shadow-gold: 0 10px 40px -10px hsl(42 68% 58% / 0.5);
+    --shadow-card: 0 4px 24px -6px hsl(0 0% 0% / 0.5);
+
+    --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  /* RTL — Arabic */
+  html[dir="rtl"] body {
+    font-family: 'Tajawal', system-ui, sans-serif;
+  }
+  html[dir="rtl"] .font-display {
+    font-family: 'Tajawal', system-ui, sans-serif;
+    font-weight: 700;
+  }
+
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-hero { background: var(--gradient-hero); }
+  .bg-gradient-gold { background: var(--gradient-gold); }
+  .bg-gradient-overlay { background: var(--gradient-overlay); }
+  .shadow-luxury { box-shadow: var(--shadow-luxury); }
+  .shadow-gold { box-shadow: var(--shadow-gold); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+
+  .gold-divider {
+    width: 60px;
+    height: 2px;
+    background: hsl(var(--gold));
+  }
+
+  .text-balance { text-wrap: balance; }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up { animation: fade-up 0.8s var(--transition-smooth) both; }
+}
