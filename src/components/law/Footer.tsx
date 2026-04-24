@@ -55,7 +55,7 @@ export const Footer = () => {
                 <Mail className="h-4 w-4 text-gold shrink-0 mt-0.5" />
                 <div className="flex flex-col">
                   <span className="text-[10px] text-gold/50 uppercase tracking-widest mb-1">{t("contact_info_email")}</span>
-                  <a href="mailto:ajlanlaw@gmail.com" className="text-cream/90 hover:text-gold transition-colors break-all">ajlanlaw@gmail.com</a>
+                  <a href="mailto:legal@ajlanlawexperts.com" className="text-cream/90 hover:text-gold transition-colors break-all">legal@ajlanlawexperts.com</a>
                 </div>
               </div>
 

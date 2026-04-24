@@ -34,7 +34,7 @@ export const Contact = () => {
     </div>
   ) 
 }, 
-   { icon: Mail, label: t("contact_info_email"), value: "ajlanlaw@gmail.com" },
+   { icon: Mail, label: t("contact_info_email"), value: "legal@ajlanlawexperts.com" },
     { icon: Clock, label: t("contact_info_hours"), value: t("contact_hours_value") },
   ];
 

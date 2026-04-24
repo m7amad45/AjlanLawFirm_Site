@@ -65,6 +65,13 @@ export const translations = {
     team_member_2_role: "Senior Legal Consultant",
     team_member_3_name: "Mr. Mohammed Erfan",
     team_member_3_role: "Director of Contracts & Legal Affairs",
+    team_member_4_name: "Ms. Abeer Al-Sufyani",
+    team_member_4_role: "Legal Consultant - Master of Laws",
+    team_member_5_name: "Lawyer / Sadeem Subhani",
+    team_member_5_role: "Lawyer - Expert in Corporate and Commercial Law",
+    team_member_6_name: "Lawyer / Abdulrahman Al-Amoudi",
+    team_member_6_role: "Lawyer - Specialized in Litigation and Dispute Resolution",
+    read_more: "ٌRead More",
 
     // Contact
     contact_eyebrow: "Get in Touch",
@@ -148,6 +155,14 @@ export const translations = {
     team_member_2_role: "مستشار قانوني أول - متخصص في صياغة العقود واللوائح",
     team_member_3_name: "الأستاذ / محمد عرفان",
     team_member_3_role: "مستشار - متخصص في نزاعات الشركات والتركات",
+    team_member_4_name: "الأستاذة / عبير السفياني",
+    team_member_4_role: "مستشارة قانونية - ماجستير قانون",
+    team_member_5_role: "محامي - خبير في القانون التجاري وقانون الشركات",
+    team_member_5_name: "المحامي / سديم سبهاني",
+    team_member_6_name: "المحامي / عبدالرحمن العامودي",
+    team_member_6_role: "محامي - متخصص في الترافع وتسوية المنازعات",
+    read_more: "اقرأ المزيد",
+
 
     contact_eyebrow: "تواصل معنا",
     contact_title: "اطلب استشارة سرّية",
