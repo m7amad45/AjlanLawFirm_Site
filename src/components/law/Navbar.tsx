@@ -32,22 +32,22 @@ export const Navbar = () => {
     >
       <nav className="container flex items-center justify-between h-20">
         {/* قسم اللوجو والنص */}
-        <a href="#home" className="group flex items-center text-cream transition-all duration-500">
+        {/* قسم اللوجو والنص - تم تعديله ليكون أفقياً وثابتاً */}
+        <a href="#home" className="flex items-center gap-3 text-cream group">
           <img 
             src={logo} 
             alt="Ajlan Law Firm Logo" 
-            className="h-32 w-auto object-contain z-10 transition-transform duration-500 group-hover:scale-95" 
+            className="h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
           />
           
-          <div className={`flex flex-col justify-center overflow-hidden max-w-0 opacity-0 transition-all duration-700 ease-in-out group-hover:max-w-md group-hover:opacity-100 px-4
-            ${lang === 'ar' ? '-mr-3 rtl:-translate-x-4' : '-ml-3 ltr:translate-x-4'} 
-            group-hover:translate-x-0`}>
-            
-            <div className="font-display text-[16px] font-semibold tracking-wide whitespace-nowrap leading-tight">
+          <div className="flex flex-col justify-center border-l border-gold/30 pl-3 py-1">
+            {/* اسم الشركة ثابت وصغير */}
+            <div className="font-display text-[12px] md:text-[14px] font-bold tracking-[0.05em] text-cream leading-tight uppercase">
               {t("brand_name")}
             </div>
             
-            <div className="text-[9px] uppercase tracking-[0.1em] text-gold/80 whitespace-nowrap mt-0.5 leading-none">
+            {/* التاغ لاين صغير جداً */}
+            <div className="text-[7px] md:text-[8px] uppercase tracking-[0.2em] text-gold/90 whitespace-nowrap mt-0.5 leading-none font-medium">
               {t("brand_tagline")}
             </div>
           </div>
