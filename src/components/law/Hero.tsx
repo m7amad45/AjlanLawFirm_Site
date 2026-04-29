@@ -7,21 +7,27 @@ import heroImg from "@/assets/hero-justice.jpg";
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView, animate } from "framer-motion";
 
-const Counter = ({ value, duration = 1.5 }: { value: string; duration?: number }) => {
+const Counter = ({
+  value,
+  duration = 1.5,
+}: {
+  value: string;
+  duration?: number;
+}) => {
   const [display, setDisplay] = useState("0");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   // استخراج الرقم واللاحقة (مثل K+)
-  const target = parseInt(value.replace(/\D/g, "")); 
-  const suffix = value.replace(/\d/g, ""); 
+  const target = parseInt(value.replace(/\D/g, ""));
+  const suffix = value.replace(/\d/g, "");
 
   useEffect(() => {
     if (isInView) {
       // ميزة: استخدام animate مباشرة لضمان سرعة ثابتة (Linear) وعدم التعليق في النهاية
       const controls = animate(0, target, {
-        duration: duration, 
-        ease: "linear", 
+        duration: duration,
+        ease: "linear",
         onUpdate: (latest) => {
           setDisplay(Math.floor(latest).toLocaleString());
         },
@@ -30,7 +36,12 @@ const Counter = ({ value, duration = 1.5 }: { value: string; duration?: number }
     }
   }, [isInView, target, duration]);
 
-  return <span ref={ref}>{display}{suffix}</span>;
+  return (
+    <span ref={ref}>
+      {display}
+      {suffix}
+    </span>
+  );
 };
 
 export const Hero = () => {
@@ -40,7 +51,10 @@ export const Hero = () => {
   );
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-navy-deep">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center overflow-hidden bg-navy-deep"
+    >
       <div className="absolute inset-0">
         <img
           src={heroImg}
@@ -61,7 +75,14 @@ export const Hero = () => {
             </span>
           </div>
 
-          <h1 className="font-display text-5xl md:text-7xl font-semibold text-cream leading-[1.05] mb-8 text-balance">
+          <h1
+            className={`font-display font-semibold text-cream leading-[1.1] mb-8 text-balance transition-all duration-500
+  ${
+    dir === "rtl"
+      ? "text-4xl md:text-6xl tracking-tight" // العربي: نص أصغر قليلاً وتضييق مسافات
+      : "text-5xl md:text-7xl tracking-normal" // الإنجليزي: الحجم الأصلي
+  }`}
+          >
             {t("hero_title")}
           </h1>
 
@@ -81,31 +102,31 @@ export const Hero = () => {
           </div>
 
           <div className="grid grid-cols-3 gap-6 md:gap-12 mt-16 pt-10 border-t border-gold/20 max-w-2xl">
-  {[
-    { n: "30+", l: t("hero_stat_years") },
-    { n: "53K+", l: t("hero_stat_cases") },
-    { n: "27K+", l: t("hero_stat_clients") },
-  ].map((s, i) => (
-    <motion.div 
-      key={s.l}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: i * 0.2 }}
-      className="group"
-    >
-      <div className="font-display text-3xl md:text-5xl text-gold font-semibold transition-transform duration-500 group-hover:scale-110">
-        {/* الميزة الجديدة: استبدلنا الرقم الثابت بالعداد */}
-        <Counter value={s.n} />
-      </div>
-      
-      <div className="text-cream/70 text-xs md:text-sm uppercase tracking-wider mt-1 relative inline-block">
-        {s.l}
-        <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-gold/50 transition-all duration-500 group-hover:w-full" />
-      </div>
-    </motion.div>
-  ))}
-</div>
+            {[
+              { n: "30+", l: t("hero_stat_years") },
+              { n: "53K+", l: t("hero_stat_cases") },
+              { n: "27K+", l: t("hero_stat_clients") },
+            ].map((s, i) => (
+              <motion.div
+                key={s.l}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.2 }}
+                className="group"
+              >
+                <div className="font-display text-3xl md:text-5xl text-gold font-semibold transition-transform duration-500 group-hover:scale-110">
+                  {/* الميزة الجديدة: استبدلنا الرقم الثابت بالعداد */}
+                  <Counter value={s.n} />
+                </div>
+
+                <div className="text-cream/70 text-xs md:text-sm uppercase tracking-wider mt-1 relative inline-block">
+                  {s.l}
+                  <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-gold/50 transition-all duration-500 group-hover:w-full" />
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

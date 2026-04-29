@@ -1,6 +1,7 @@
-import { useState } from "react";
-import { Linkedin, Mail, ChevronDown, ChevronUp } from "lucide-react";
+import { Mail } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+
+// استيراد الصور
 import l1 from "@/assets/Mohammed_Ajlan.jpeg";
 import l2 from "@/assets/Osama_Johary.jpeg";
 import l3 from "@/assets/Mohammed_Erfan.jpeg";
@@ -12,118 +13,173 @@ import l8 from "@/assets/Hassan_Abdelkareem.jpeg";
 
 export const Team = () => {
   const { t } = useLanguage();
-  const [showAll, setShowAll] = useState(false);
 
   const teamData = {
     leader: [
-      { id: "leader", img: l1, name: t("team_member_1_name"), role: t("team_member_1_role"), email: "m.ajlan@ajlanlawexperts.com" }
-    ],
-    consultants: [
-      { id: "staff", img: l3, name: t("team_member_3_name"), role: t("team_member_3_role"), email: "m.erfan@ajlanlawexperts.com" },
-      { id: "staff", img: l2, name: t("team_member_2_name"), role: t("team_member_2_role"), email: "o.aljohary@ajlanlawexperts.com" }
-    ],
-    lawyers: [
-      { id: "staff", img: l6, name: t("team_member_6_name"), role: t("team_member_6_role"), email: "a.alamoudi@ajlanlawexperts.com" },
-      { id: "staff", img: l5, name: t("team_member_5_name"), role: t("team_member_5_role"), email: "s.sabhani@ajlanlawexperts.com" }
+      {
+        id: "leader",
+        img: l1,
+        name: t("team_member_1_name"),
+        role: t("team_member_1_role"),
+        email: "m.ajlan@ajlanlawexperts.com",
+      },
     ],
     management: [
-      { id: "staff", img: l4, name: t("team_member_4_name"), role: t("team_member_4_role"), email: "a.alsufiany@ajlanlawexperts.com" },
-      { id: "staff", img: l7, name: t("team_member_7_name"), role: t("team_member_7_role"), email: "a.alsufiany@ajlanlawexperts.com" },
-      { id: "staff", img: l8, name: t("team_member_8_name"), role: t("team_member_8_role"), email: "a.alsufiany@ajlanlawexperts.com" }
-    ]
+      {
+        img: l3,
+        name: t("team_member_3_name"),
+        role: t("team_member_3_role"),
+        email: "m.erfan@ajlanlawexperts.com",
+      },
+      {
+        img: l2,
+        name: t("team_member_2_name"),
+        role: t("team_member_2_role"),
+        email: "o.aljohary@ajlanlawexperts.com",
+      },
+      {
+        img: l6,
+        name: t("team_member_6_name"),
+        role: t("team_member_6_role"),
+        email: "a.alamoudi@ajlanlawexperts.com",
+      },
+      {
+        img: l5,
+        name: t("team_member_5_name"),
+        role: t("team_member_5_role"),
+        email: "s.sabhani@ajlanlawexperts.com",
+      },
+      {
+        img: l4,
+        name: t("team_member_4_name"),
+        role: t("team_member_4_role"),
+        email: "a.alsufiany@ajlanlawexperts.com",
+      },
+    ],
+    support: [
+      {
+        img: l7,
+        name: t("team_member_7_name"),
+        role: t("team_member_7_role"),
+        email: "n.bamejally@ajlanlawexperts.com",
+      },
+      {
+        img: l8,
+        name: t("team_member_8_name"),
+        role: t("team_member_8_role"),
+        email: "h.abdelkareem@ajlanlawexperts.com",
+      },
+    ],
   };
 
-  const MemberCard = ({ m }: { m: any }) => (
+  const MemberCard = ({
+    m,
+    isLeader = false,
+  }: {
+    m: any;
+    isLeader?: boolean;
+  }) => (
     <div className="group relative">
-      <div className={`relative overflow-hidden mb-4 bg-navy shadow-xl transition-all duration-500 border border-white/5 hover:border-gold/30 ${m.id === 'leader' ? 'border-[4px] border-gold shadow-gold/20' : ''}`}>
-        <img src={m.img} alt={m.name} className="w-full h-[350px] object-cover transition-transform duration-700 group-hover:scale-105" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-        <div className="absolute bottom-4 left-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all">
-          <a href="#" className="w-8 h-8 bg-gold text-navy flex items-center justify-center hover:bg-white transition-colors"><Linkedin size={16} /></a>
-          <a href={`mailto:legal@ajlanlawexperts.com`} className="w-8 h-8 bg-gold text-navy flex items-center justify-center hover:bg-white transition-colors"><Mail size={16} /></a>
+      <div
+        className={`relative overflow-hidden mb-3 bg-navy border border-white/5 transition-all duration-500 hover:border-gold/30 ${isLeader ? "border-gold/50 shadow-lg shadow-gold/10" : ""}`}
+      >
+        <img
+          src={m.img}
+          alt={m.name}
+          className="w-full h-[320px] md:h-[350px] object-cover object-top transition-transform duration-700 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
+          {/* تم إلغاء اللينكد إن والإبقاء على الإيميل فقط وتوسيطه */}
+          <a
+            href={`mailto:legal@ajlanlawexperts.com`}
+            className="w-10 h-10 rounded-full bg-gold text-navy flex items-center justify-center hover:bg-white transition-all shadow-lg"
+          >
+            <Mail size={18} />
+          </a>
         </div>
       </div>
       <div className="text-center">
-        <h3 className={`font-display text-lg font-semibold transition-colors ${m.id === 'leader' ? 'text-gold text-xl' : 'text-cream group-hover:text-gold'}`}>{m.name}</h3>
-        <p className="text-[10px] text-muted-foreground uppercase tracking-wider mt-1">{m.role}</p>
+        <h3
+          className={`font-display font-semibold transition-colors ${isLeader ? "text-gold text-xl" : "text-cream text-base group-hover:text-gold"}`}
+        >
+          {m.name}
+        </h3>
+        <p className="text-[9px] text-gold/50 uppercase tracking-[0.2em] mt-0.5">
+          {m.role}
+        </p>
       </div>
     </div>
   );
 
   return (
-    <section id="team" className="py-20 bg-background overflow-hidden">
+    <section id="team" className="py-16 bg-background">
       <div className="container">
-        
-        {/* العناوين الرئيسية */}
-        <div className="text-center mb-24">
-          <h2 className="font-display text-4xl md:text-5xl text-cream font-semibold ">{t("team_title")}</h2>
-          <div className="h-1 w-20 bg-gold mx-auto mt-4" />
+        <div className="text-center mb-12">
+          <h2 className="font-display text-3xl md:text-4xl text-cream font-bold">
+            {t("team_title")}
+          </h2>
+          <div className="h-1 w-16 bg-gold mx-auto mt-3" />
         </div>
 
-        <div className="space-y-24">
-          
-          {/* 1. صف القيادة - محاذاة في النص */}
+        <div className="flex flex-col gap-y-16">
+          {/* 1. القيادة العليا */}
           <div className="flex flex-col items-center">
-            <div className="text-center mb-10">
-              <h4 className="text-gold uppercase tracking-[0.2em] text-xs font-bold mb-2">القيادة العليا</h4>
-              <div className="h-px w-10 bg-gold/30 mx-auto" />
-            </div>
-            <div className="w-full max-w-[320px]">
-              {teamData.leader.map((m, i) => <MemberCard key={i} m={m} />)}
-            </div>
-          </div>
-
-          {/* 2. صف المستشارين */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 items-start">
-            <div className="md:col-span-1 border-r border-gold/20 pr-6 rtl:border-r-0 rtl:border-l rtl:pl-6">
-              <h4 className="text-gold uppercase tracking-[0.2em] text-xs font-bold mb-2">المستشارون</h4>
-              <p className="text-muted-foreground text-[11px] leading-relaxed">نخبة من الخبراء القانونيين</p>
-            </div>
-            <div className="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {teamData.consultants.map((m, i) => <MemberCard key={i} m={m} />)}
+            <h4 className="text-gold uppercase tracking-[0.3em] text-[10px] font-bold mb-6 opacity-80">
+              {t("team_category_leader")}
+            </h4>
+            <div className="w-full max-w-[300px]">
+              {teamData.leader.map((m, i) => (
+                <MemberCard key={i} m={m} isLeader={true} />
+              ))}
             </div>
           </div>
 
-          {/* --- قسم الطي --- */}
-          {showAll && (
-            <div className="space-y-24 animate-in fade-in slide-in-from-top-10 duration-700">
-              {/* 3. صف المحامون */}
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-10 items-start">
-                <div className="md:col-span-1 border-r border-gold/20 pr-6 rtl:border-r-0 rtl:border-l rtl:pl-6">
-                  <h4 className="text-gold uppercase tracking-[0.2em] text-xs font-bold mb-2">المحامون</h4>
-                </div>
-                <div className="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {teamData.lawyers.map((m, i) => <MemberCard key={i} m={m} />)}
-                </div>
-              </div>
-
-              {/* 4. صف الإدارة */}
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-10 items-start">
-                <div className="md:col-span-1 border-r border-gold/20 pr-6 rtl:border-r-0 rtl:border-l rtl:pl-6">
-                  <h4 className="text-gold uppercase tracking-[0.2em] text-xs font-bold mb-2">الإدارة</h4>
-                </div>
-                <div className="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {teamData.management.map((m, i) => <MemberCard key={i} m={m} />)}
-                </div>
-              </div>
+          {/* 2. الإدارة */}
+          <div className="w-full">
+            <div className="flex items-center gap-4 mb-8">
+              <h4 className="text-gold uppercase tracking-[0.3em] text-[10px] font-bold whitespace-nowrap">
+                {t("team_category_management")}
+              </h4>
+              <div className="h-px w-full bg-gold/10" />
             </div>
-          )}
 
-          {/* زر إظهار المزيد / إخفاء */}
-          <div className="flex justify-center pt-10">
-            <button 
-              onClick={() => setShowAll(!showAll)}
-              className="group flex flex-col items-center gap-2 text-gold hover:text-white transition-all"
-            >
-              <span className="text-[10px] font-bold uppercase tracking-[0.3em]">
-                {showAll ? "عرض أقل" : "إظهار كافة أعضاء الفريق"}
-              </span>
-              <div className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center group-hover:border-gold transition-all">
-                {showAll ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-              </div>
-            </button>
+            <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
+              {teamData.management.map((m, i) => (
+                <div
+                  key={i}
+                  className={`${i === 4 ? "col-span-2 lg:col-span-1 flex justify-center lg:block" : ""}`}
+                >
+                  <div
+                    className={
+                      i === 4
+                        ? "w-full max-w-[calc(50%-12px)] lg:max-w-full"
+                        : ""
+                    }
+                  >
+                    <MemberCard m={m} />
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
+          {/* 3. فريق الدعم */}
+          <div className="w-full">
+            <div className="flex items-center gap-4 mb-8">
+              <h4 className="text-gold uppercase tracking-[0.3em] text-[10px] font-bold whitespace-nowrap">
+                {t("team_category_support")}
+              </h4>
+              <div className="h-px w-full bg-gold/10" />
+            </div>
+            <div className="flex flex-wrap justify-center gap-6">
+              {teamData.support.map((m, i) => (
+                <div key={i} className="w-[calc(50%-12px)] md:w-[240px]">
+                  <MemberCard m={m} />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
