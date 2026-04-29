@@ -90,9 +90,8 @@ export const Team = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
-          {/* تم إلغاء اللينكد إن والإبقاء على الإيميل فقط وتوسيطه */}
           <a
-            href={`mailto:legal@ajlanlawexperts.com`}
+            href={`mailto:${m.email}`}
             className="w-10 h-10 rounded-full bg-gold text-navy flex items-center justify-center hover:bg-white transition-all shadow-lg"
           >
             <Mail size={18} />
@@ -100,12 +99,14 @@ export const Team = () => {
         </div>
       </div>
       <div className="text-center">
+        {/* الاسم: تم تغيير الخط ليكون Bold وبروز أكبر */}
         <h3
-          className={`font-display font-semibold transition-colors ${isLeader ? "text-gold text-xl" : "text-cream text-base group-hover:text-gold"}`}
+          className={`font-display font-bold tracking-wide transition-colors ${isLeader ? "text-gold text-2xl md:text-3xl" : "text-cream text-lg md:text-xl-lg group-hover:text-gold"}`}
         >
           {m.name}
         </h3>
-        <p className="text-[9px] text-gold/50 uppercase tracking-[0.2em] mt-0.5">
+        {/* المنصب: تم تغييره للأبيض، تكبير الخط، وتقليل التباعد العنيف */}
+        <p className="text-[12px] md:text-[18px] text-cream/80 font-medium uppercase tracking-[0.1em] mt-2">
           {m.role}
         </p>
       </div>

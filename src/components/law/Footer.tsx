@@ -44,13 +44,14 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* العمود الثاني: التواصل (بدون تغيير) */}
+          {/* العمود الثاني: التواصل (ملموم ومقسم بالعرض) */}
           <div className="flex flex-col gap-6">
             <h4 className="text-gold uppercase tracking-wider text-[11px] font-bold border-b border-gold/10 pb-2 w-fit">
               {t("nav_contact")}
             </h4>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 text-sm">
+              {/* العنوان */}
               <div className="flex gap-3">
                 <MapPin className="h-4 w-4 text-gold shrink-0 mt-0.5" />
                 <div className="flex flex-col">
@@ -63,6 +64,7 @@ export const Footer = () => {
                 </div>
               </div>
 
+              {/* البريد */}
               <div className="flex gap-3">
                 <Mail className="h-4 w-4 text-gold shrink-0 mt-0.5" />
                 <div className="flex flex-col">
@@ -78,7 +80,8 @@ export const Footer = () => {
                 </div>
               </div>
 
-              <div className="flex gap-3">
+              {/* الهاتف - عرض الأرقام بشكل ملموم */}
+              <div className="flex gap-3 sm:col-span-1">
                 <Phone className="h-4 w-4 text-gold shrink-0 mt-0.5 rtl:-scale-x-100" />
                 <div className="flex flex-col">
                   <span className="text-[10px] text-gold/50 uppercase tracking-widest mb-1">
@@ -89,6 +92,18 @@ export const Footer = () => {
                     dir="ltr"
                   >
                     <a
+                      href="tel:+966505626810"
+                      className="hover:text-gold transition-colors"
+                    >
+                      +966 50 562 6810
+                    </a>
+                    <a
+                      href="tel:+966550092012"
+                      className="hover:text-gold transition-colors"
+                    >
+                      +966 55 009 2012
+                    </a>
+                    <a
                       href="tel:+966126596999"
                       className="hover:text-gold transition-colors"
                     >
@@ -98,21 +113,42 @@ export const Footer = () => {
                 </div>
               </div>
 
+              {/* الواتساب */}
               <div className="flex gap-3">
                 <MessageCircle className="h-4 w-4 text-gold shrink-0 mt-0.5" />
                 <div className="flex flex-col">
                   <span className="text-[10px] text-gold/50 uppercase tracking-widest mb-1">
                     {t("contact_info_Whatsapp")}
                   </span>
-                  <a
-                    href="https://wa.me/966505626810"
-                    target="_blank"
-                    rel="noreferrer"
-                    dir="ltr"
-                    className="text-cream/90 hover:text-gold transition-colors font-medium"
-                  >
-                    +966 50 562 6810
-                  </a>
+                  <div className="flex flex-col text-cream/90 font-medium space-y-1">
+                    <a
+                      href="https://wa.me/966126596999"
+                      target="_blank"
+                      rel="noreferrer"
+                      dir="ltr"
+                      className="text-cream/90 hover:text-gold transition-colors font-medium"
+                    >
+                      +966 12 659 6999
+                    </a>
+                    <a
+                      href="https://wa.me/966505626810"
+                      target="_blank"
+                      rel="noreferrer"
+                      dir="ltr"
+                      className="text-cream/90 hover:text-gold transition-colors font-medium"
+                    >
+                      +966 50 562 6810
+                    </a>
+                    <a
+                      href="https://wa.me/966550092012"
+                      target="_blank"
+                      rel="noreferrer"
+                      dir="ltr"
+                      className="text-cream/90 hover:text-gold transition-colors font-medium"
+                    >
+                      +966 55 009 2012
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
