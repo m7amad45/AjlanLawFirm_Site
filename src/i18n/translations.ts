@@ -78,7 +78,7 @@ export const translations = {
     team_member_2_name: "Mr. Osama Al-Johary",
     team_member_2_role: "Legal Consultant",
     team_member_3_name: "Mr. Mohammed Erfan",
-    team_member_3_role: "Legal Consultantv",
+    team_member_3_role: "Legal Consultant",
     team_member_4_name: "Ms. Abeer Al-Sufyani",
     team_member_4_role: "Office Manager",
     team_member_5_name: "Sadeem Subhani",
