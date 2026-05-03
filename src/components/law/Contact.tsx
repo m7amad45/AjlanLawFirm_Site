@@ -84,10 +84,7 @@ export const Contact = () => {
   ];
 
   return (
-    <section
-      id="contact"
-      className="pt-10 pb-16 md:pt-12 md:pb-20 bg-navy-deep"
-    >
+    <section id="contact" className="pt-10 pb-16 md:pt-8 md:pb-8 bg-navy-deep">
       <div className="container">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="flex items-center gap-3 justify-center mb-5">

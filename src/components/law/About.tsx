@@ -5,15 +5,26 @@ import aboutImg from "@/assets/about-office.png";
 export const About = () => {
   const { t } = useLanguage();
   const values = [
-    { icon: Shield, title: t("about_value_1_title"), desc: t("about_value_1_desc") },
-    { icon: Gavel, title: t("about_value_2_title"), desc: t("about_value_2_desc") },
-    { icon: Award, title: t("about_value_3_title"), desc: t("about_value_3_desc") },
+    {
+      icon: Shield,
+      title: t("about_value_1_title"),
+      desc: t("about_value_1_desc"),
+    },
+    {
+      icon: Gavel,
+      title: t("about_value_2_title"),
+      desc: t("about_value_2_desc"),
+    },
+    {
+      icon: Award,
+      title: t("about_value_3_title"),
+      desc: t("about_value_3_desc"),
+    },
   ];
 
   return (
-    <section id="about" className="pt-24 pb-20 bg-background overflow-hidden">
+    <section id="about" className="pt-12 pb-8 bg-background overflow-hidden">
       <div className="container grid lg:grid-cols-2 gap-16 items-center">
-        
         {/* جهة الصورة - تم تعديل القص ليملأ المربع بالكامل */}
         <div className="relative order-2 lg:order-1">
           {/* لمسة توهج خلفية لإبراز الصورة (اختياري، يمكن حذفه إذا كنت تفضل البساطة المطلقة) */}
@@ -27,10 +38,12 @@ export const About = () => {
               // {/* هنا السر:object-cover مع object-center لقص ذكي يملأ المربع ويركز على اليد والعلم */}
               className="w-full h-full object-cover object-center shadow-luxury"
             />
-            
+
             {/* الوسام الذهبي المربع (+30 عام) */}
             <div className="absolute -bottom-8 ltr:-right-8 rtl:-left-8 bg-gradient-gold p-6 shadow-luxury min-w-[140px] aspect-square flex flex-col items-center justify-center z-20 border border-gold/20 hover:scale-105 transition-transform duration-300">
-              <div className="font-display text-5xl text-navy-deep font-bold leading-none tracking-tighter">30+</div>
+              <div className="font-display text-5xl text-navy-deep font-bold leading-none tracking-tighter">
+                30+
+              </div>
               <div className="text-[10px] uppercase tracking-[0.2em] mt-3 text-navy-deep font-bold leading-tight text-center">
                 {t("hero_stat_years")}
               </div>
@@ -46,11 +59,11 @@ export const About = () => {
               {t("about_eyebrow")}
             </span>
           </div>
-          
+
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-cream font-semibold mb-8 leading-[1.15] text-balance">
             {t("about_title")}
           </h2>
-          
+
           <div className="space-y-6 mb-12">
             <p className="text-muted-foreground text-lg leading-relaxed border-s-2 border-gold/20 ps-6">
               {t("about_p1")}
@@ -78,7 +91,6 @@ export const About = () => {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

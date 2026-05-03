@@ -114,7 +114,7 @@ export const Team = () => {
   );
 
   return (
-    <section id="team" className="py-16 bg-background">
+    <section id="team" className="py-8 bg-background">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="font-display text-3xl md:text-4xl text-cream font-bold">

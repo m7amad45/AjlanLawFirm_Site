@@ -90,7 +90,7 @@ export const translations = {
     team_member_8_name: "Hassan Abdelkareem",
     team_member_8_role: "Administrative Assistant",
     team_category_leader: "Senior Leadership",
-    team_category_management: "Management",
+    team_category_management: "Executive Team",
     team_category_support: "Support Team",
 
     // Contact
@@ -199,7 +199,7 @@ export const translations = {
     team_member_8_name: "الاستاذ /حسن عبدالكريم",
     team_member_8_role: "مساعد إداري ",
     team_category_leader: "القيادة العليا",
-    team_category_management: "الإدارة",
+    team_category_management: "الفريق التنفيذي",
     team_category_support: "فريق الدعم",
 
     contact_eyebrow: "تواصل معنا",
