@@ -104,7 +104,7 @@ export const Hero = () => {
           <div className="grid grid-cols-3 gap-6 md:gap-12 mt-16 pt-10 border-t border-gold/20 max-w-2xl">
             {[
               { n: "30+", l: t("hero_stat_years") },
-              { n: "3,000+", l: t("hero_stat_cases") },
+              { n: "3000+", l: t("hero_stat_cases") },
               { n: "500+", l: t("hero_stat_clients") },
             ].map((s, i) => (
               <motion.div
