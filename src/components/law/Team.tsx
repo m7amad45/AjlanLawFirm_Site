@@ -10,10 +10,11 @@ import l5 from "@/assets/Sadeem_Sabhani.jpeg";
 import l6 from "@/assets/Abdulrahman_Amoudi.jpeg";
 import l7 from "@/assets/Nedal_Bamejally.jpeg";
 import l8 from "@/assets/Hassan_Abdelkareem.jpeg";
+import { useNavigate } from "react-router-dom"; // أضف هذا الاستيراد
 
 export const Team = () => {
-  const { t } = useLanguage();
-
+  const { t, dir } = useLanguage();
+  const navigate = useNavigate(); // السطر الجديد
   const teamData = {
     leader: [
       {
@@ -91,7 +92,7 @@ export const Team = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
           <a
-            href={`mailto:${m.email}`}
+            href={`mailto:legal@ajlanlawexperts.com`}
             className="w-10 h-10 rounded-full bg-gold text-navy flex items-center justify-center hover:bg-white transition-all shadow-lg"
           >
             <Mail size={18} />
