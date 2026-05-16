@@ -3,13 +3,13 @@ import { useLanguage } from "@/i18n/LanguageContext";
 
 // استيراد الصور
 import l1 from "@/assets/Mohammed_Ajlan.jpeg";
-import l2 from "@/assets/Osama_Johary.jpeg";
-import l3 from "@/assets/Mohammed_Erfan.jpeg";
+import l2 from "@/assets/Osama_Johary.png";
+import l3 from "@/assets/Mohammed_Erfan.png";
 import l4 from "@/assets/Abeer_Sufiany.jpeg";
 import l5 from "@/assets/Sadeem_Sabhani.jpeg";
-import l6 from "@/assets/Abdulrahman_Amoudi.jpeg";
+import l6 from "@/assets/Abdulrahman_Amoudi.png";
 import l7 from "@/assets/Nedal_Bamejally.jpeg";
-import l8 from "@/assets/Hassan_Abdelkareem.jpeg";
+import l8 from "@/assets/Hassan_Abdelkareem.png";
 import { useNavigate } from "react-router-dom"; // أضف هذا الاستيراد
 
 export const Team = () => {

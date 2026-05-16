@@ -92,6 +92,13 @@ export const translations = {
     team_category_leader: "Senior Leadership",
     team_category_management: "Executive Team",
     team_category_support: "Support Team",
+    // داخل en: { ... }
+    team_member_1_bio:
+      "Mr. Mohammed Ajlan has over 30 years of experience in judiciary and law...",
+    team_member_1_education:
+      "B.A. in Sharia and Law - King Abdulaziz University",
+    team_member_1_exp:
+      "Expert in Administrative Court cases, International Arbitration, and Energy Law.",
 
     // Contact
     contact_eyebrow: "Get in Touch",
@@ -201,6 +208,12 @@ export const translations = {
     team_category_leader: "القيادة العليا",
     team_category_management: "الفريق التنفيذي",
     team_category_support: "فريق الدعم",
+    // داخل ar: { ... }
+    team_member_1_bio:
+      "يتمتع الأستاذ محمد عجلان بخبرة تمتد لأكثر من 30 عاماً في القضاء والمحاماة...",
+    team_member_1_education: "بكالوريوس شريعة وقانون - جامعة الملك عبدالعزيز",
+    team_member_1_exp:
+      "خبير في قضايا ديوان المظالم، التحكيم التجاري الدولي، وقوانين الطاقة.",
 
     contact_eyebrow: "تواصل معنا",
     contact_title: "اطلب استشارة سرّية",
