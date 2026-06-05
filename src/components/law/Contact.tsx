@@ -97,7 +97,7 @@ export const Contact = () => {
           <h2 className="font-display text-4xl md:text-5xl text-cream font-semibold mb-5 text-balance">
             {t("contact_title")}
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-md font-light">
             {t("contact_subtitle")}
           </p>
         </div>

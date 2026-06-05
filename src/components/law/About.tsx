@@ -3,7 +3,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import aboutImg from "@/assets/about-office.png";
 
 export const About = () => {
-  const { t } = useLanguage();
+  const { t, dir } = useLanguage();
   const values = [
     {
       icon: Shield,
@@ -60,16 +60,25 @@ export const About = () => {
             </span>
           </div>
 
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-cream font-semibold mb-8 leading-[1.15] text-balance">
+          <h2
+            className={`font-display font-light text-cream mb-8 transition-all duration-300
+    ${
+      dir === "rtl"
+        ? "text-2xl md:text-4xl lg:text-5xl leading-relaxed tracking-wide max-w-2xl" // 🟢 أزلنا text-balance، وأضفنا max-w-2xl لفرد المساحة أفقياً، وضبطنا الحجم لتظهر الجملة في صف أو صفين بالملي
+        : "text-4xl md:text-5xl lg:text-6xl leading-[1.15] tracking-tight text-balance" // الإنجليزي يحافظ على توازنه الأصلي
+    }`}
+          >
             {t("about_title")}
           </h2>
 
           <div className="space-y-6 mb-12">
-            <p className="text-muted-foreground text-lg leading-relaxed border-s-2 border-gold/20 ps-6">
-              {t("about_p1")}
+            <p className="text-muted-foreground font-light text-lg leading-relaxed border-s-2 border-gold/20 ps-6">
+              {t("about_p1")}{" "}
+              {/* 🟢 أضفنا font-light لتصبح الفقرة الأولى نحيفة ورشيقة جداً في القراءة */}
             </p>
-            <p className="text-muted-foreground leading-relaxed ps-6 opacity-80">
-              {t("about_p2")}
+            <p className="text-muted-foreground font-light leading-relaxed ps-6 opacity-80">
+              {t("about_p2")}{" "}
+              {/* 🟢 أضفنا font-light لتنحيف الفقرة الثانية لتطابق جارتها بالأعلى */}
             </p>
           </div>
 

@@ -70,18 +70,19 @@ export const Hero = () => {
         <div className="max-w-3xl animate-fade-up">
           <div className="flex items-center gap-3 mb-6">
             <span className="h-px w-12 bg-gold" />
-            <span className="text-gold uppercase tracking-[0.3em] text-xs font-medium">
+            <span className="font-sans text-gold ltr:uppercase tracking-[0.3em] text-sm font-normal opacity-90">
+              {/* 🟢 حقنا font-sans لتوحيد الخط، وحولنا uppercase إلى ltr:uppercase لتطبق على الإنجليزي فقط وتضبط تراصف النص العربي الحاد */}
               {t("hero_eyebrow")}
             </span>
           </div>
 
           <h1
-            className={`font-display font-semibold text-cream leading-[1.1] mb-8 text-balance transition-all duration-500
-  ${
-    dir === "rtl"
-      ? "text-4xl md:text-6xl tracking-tight" // العربي: نص أصغر قليلاً وتضييق مسافات
-      : "text-5xl md:text-7xl tracking-normal" // الإنجليزي: الحجم الأصلي
-  }`}
+            className={`font-display font-light text-cream leading-[1.1] mb-8 text-balance transition-all duration-500
+${
+  dir === "rtl"
+    ? "text-4xl md:text-6xl tracking-tight" // العربي: رشيق وبوزن نحيف هندسياً
+    : "text-5xl md:text-7xl tracking-normal" // الإنجليزي: نحيف وحاد كالمسطرة بـ Cormorant
+}`}
           >
             {t("hero_title")}
           </h1>
@@ -115,8 +116,8 @@ export const Hero = () => {
                 transition={{ duration: 0.6, delay: i * 0.2 }}
                 className="group"
               >
-                <div className="font-display text-3xl md:text-5xl text-gold font-semibold transition-transform duration-500 group-hover:scale-110">
-                  {/* الميزة الجديدة: استبدلنا الرقم الثابت بالعداد */}
+                <div className="font-display text-3xl md:text-5xl text-gold font-light tracking-tight transition-transform duration-500 group-hover:scale-110">
+                  {/* 🟢 تم تحويل font-semibold إلى font-light لتظهر أرقام العداد رشيقة وحادة وتطابق هويتك الجديدة تماماً */}
                   <Counter value={s.n} />
                 </div>
 

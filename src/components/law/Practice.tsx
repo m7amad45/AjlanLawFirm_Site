@@ -60,7 +60,7 @@ export const Practice = () => {
       />
 
       <div className="container relative">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-8">
           <div className="flex items-center gap-3 justify-center mb-5">
             <span className="h-px w-12 bg-gold" />
             <span className="text-gold uppercase tracking-[0.3em] text-xs font-semibold">
@@ -71,7 +71,9 @@ export const Practice = () => {
           <h2 className="font-display text-4xl md:text-5xl font-semibold mb-5 text-balance">
             {t("practice_title")}
           </h2>
-          <p className="text-cream/70 text-lg">{t("practice_subtitle")}</p>
+          <p className="text-cream/70 text-sm font-light">
+            {t("practice_subtitle")}
+          </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-gold/15">
@@ -84,10 +86,11 @@ export const Practice = () => {
                 className="h-10 w-10 text-gold mb-6 group-hover:scale-110 transition-transform duration-500"
                 strokeWidth={1.25}
               />
-              <h3 className="font-display text-2xl font-semibold mb-3">
-                {a.title}
+              <h3 className="font-display text-2xl font-normal mb-3 group-hover:text-gold transition-colors duration-300">
+                {a.title}{" "}
+                {/* 🟢 تم تعديله لنحافة متناسقة مع إضافة تأثير ذهبي خفيف عند تمرير الماوس لتفاعل أفخم */}
               </h3>
-              <p className="text-cream/70 text-sm leading-relaxed mb-0">
+              <p className="text-cream/70 text-sm font-light leading-relaxed mb-0">
                 {a.desc}
               </p>
               <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-gold transition-all duration-500 group-hover:w-full" />

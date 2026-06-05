@@ -157,7 +157,8 @@ export const Footer = () => {
 
         {/* سطر الحقوق السفلي */}
         <div className="mt-12 pt-8 border-t border-gold/5 text-[9px] uppercase tracking-[0.4em] text-cream/20 text-center">
-          © {new Date().getFullYear()} {t("brand_name")}. {t("footer_rights")}
+          {t("footer_law_license")} - {t("footer_Registration")} <br />©
+          {new Date().getFullYear()} {t("brand_name")}. {t("footer_rights")}
         </div>
       </div>
     </footer>

@@ -6,6 +6,7 @@ import { Practice } from "@/components/law/Practice";
 import { Team } from "@/components/law/Team";
 import { Contact } from "@/components/law/Contact";
 import { Footer } from "@/components/law/Footer";
+import { Outlet, useLocation } from "react-router-dom"; // سطر جديد مستورد
 
 const Index = () => {
   return (
@@ -13,11 +14,17 @@ const Index = () => {
       <div className="min-h-screen bg-background">
         <Navbar />
         <main>
-          <Hero />
-          <About />
-          <Practice />
-          <Team />
-          <Contact />
+          {useLocation().pathname === "/" ? (
+            <>
+              <Hero />
+              <About />
+              <Practice />
+              <Team />
+              <Contact />
+            </>
+          ) : (
+            <Outlet />
+          )}
         </main>
         <Footer />
       </div>
