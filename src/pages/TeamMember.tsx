@@ -102,6 +102,28 @@ export const TeamMember = () => {
   const specializations =
     !specRaw || specRaw === specKey ? [] : specRaw.split("\n").filter(Boolean);
 
+  // 🟢 أإضافة قراءة قسم النبذة التعريفية لمحمد عجلان
+  const speechKey = `team_member_${memberId}_speech_text`;
+  const speechRaw = t(speechKey as any);
+  const speechParagraphs =
+    !speechRaw || speechRaw === speechKey
+      ? []
+      : speechRaw.split("\n").filter(Boolean);
+
+  // 🟢 إضافة قراءة قسم العضويات المهنية لمحمد عجلان
+  const achKey = `team_member_${memberId}_achievements_text`;
+  const achRaw = t(achKey as any);
+  const achievements =
+    !achRaw || achRaw === achKey ? [] : achRaw.split("\n").filter(Boolean);
+
+  // 🟢 إضافة قراءة قسم القيم والالتزام لمحمد عجلان
+  const valuesKey = `team_member_${memberId}_values_text`;
+  const valuesRaw = t(valuesKey as any);
+  const valuesParagraphs =
+    !valuesRaw || valuesRaw === valuesKey
+      ? []
+      : valuesRaw.split("\n").filter(Boolean);
+
   // 4. اللغات
   const langKey = `team_member_${memberId}_languages_text`;
   const langRaw = t(langKey as any);
@@ -127,7 +149,22 @@ export const TeamMember = () => {
         {/* ================= هندسة الـ Grid: البيانات والصورة بجانب بعضهما بالكامل ================= */}
         <div className="grid md:grid-cols-12 gap-8 md:gap-12 items-start pt-2">
           {/* 📜 العمود الأيمن (7 أعمدة): يحتوي على الأقسام الأربعة مسرودة بجانب الصورة */}
+          {/* 📜 العمود الأيمن (7 أعمدة): يحتوي على الأقسام مسرودة بجانب الصورة */}
           <div className="md:col-span-7 space-y-10 text-justify ltr:text-left rtl:text-right order-2 md:order-1">
+            {/* 🟢 1. قسم النبذة التعريفية (يظهر فقط لمن يمتلك هذا الكي في الـ JSON) */}
+            {speechParagraphs.length > 0 && (
+              <div className="bg-gold/[0.02] p-6 rounded-sm border-l-2 rtl:border-l-0 rtl:border-r-2 border-gold/40 my-4">
+                <h3 className="text-xl font-medium text-gold font-display mb-3">
+                  {t(`team_member_${memberId}_speech_title` as any)}
+                </h3>
+                <div className="space-y-3 text-cream/90 text-[15px] leading-relaxed font-light">
+                  {speechParagraphs.map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* 1. المؤهلات العلمية */}
             {qualifications.length > 0 && (
               <div className="space-y-3">
@@ -184,6 +221,40 @@ export const TeamMember = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
+            )}
+
+            {/* 🟢 2. قسم العضويات المهنية لمحمد عجلان */}
+            {achievements.length > 0 && (
+              <div className="space-y-3">
+                <h3 className="text-xl font-medium text-gold font-display border-b border-white/5 pb-2">
+                  {t(`team_member_${memberId}_achievements_title` as any)}
+                </h3>
+                <ul className="space-y-3 text-cream/80 text-[15px] md:text-base leading-relaxed list-none ltr:pl-1 rtl:pr-1">
+                  {achievements.map((item, index) => (
+                    <li key={index} className="flex items-start gap-2 group">
+                      <ChevronRight
+                        size={16}
+                        className="text-gold mt-1 shrink-0 transition-transform duration-300 ltr:rotate-0 rtl:rotate-180 opacity-60"
+                      />
+                      <span className="text-justify">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* 🟢 3. قسم القيم والالتزام المهني لمحمد عجلان */}
+            {valuesParagraphs.length > 0 && (
+              <div className="space-y-3">
+                <h3 className="text-xl font-medium text-gold font-display border-b border-white/5 pb-2">
+                  {t(`team_member_${memberId}_values_title` as any)}
+                </h3>
+                <div className="space-y-3 text-cream/80 text-[15px] md:text-base leading-relaxed font-light">
+                  {valuesParagraphs.map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  ))}
+                </div>
               </div>
             )}
 

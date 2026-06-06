@@ -3,15 +3,15 @@ import { useLanguage } from "@/i18n/LanguageContext";
 
 // استيراد الصور
 import l1 from "@/assets/Mohammed_Ajlan.jpeg";
-import l2 from "@/assets/Osama_Johary.png";
-import l3 from "@/assets/Mohammed_Erfan.png";
+import l2 from "@/assets/zzOsama_Johary.png";
+import l3 from "@/assets/zzMohammed_Erfan.png";
 import l4 from "@/assets/Abeer_Sufiany.jpeg";
-import l5 from "@/assets/Sadeem_Sabhani.jpeg";
-import l6 from "@/assets/Abdulrahman_Amoudi.png";
+import l5 from "@/assets/zzSadeem_Sabhani.png";
+import l6 from "@/assets/zzAbdulrahman_Amoudi.png";
 import l7 from "@/assets/Nedal_Bamejally.jpeg";
 import l8 from "@/assets/Hassan_Abdelkareem.png";
-import l9 from "@/assets/Yazzan_Ajlan.png";
-import l10 from "@/assets/KAMIRAN DAKOURI.png";
+import l9 from "@/assets/zzYazzan_Ajlan.png";
+import l10 from "@/assets/zzKAMIRAN DAKOURI.png";
 
 import { useNavigate } from "react-router-dom"; // أضف هذا الاستيراد
 
@@ -52,18 +52,18 @@ export const Team = () => {
         email: "o.aljohary@ajlanlawexperts.com",
       },
       {
-        slug: "abdulrahman-alamoudi",
-        img: l6,
-        name: t("team_member_6_name"),
-        role: t("team_member_6_role"),
-        email: "a.alamoudi@ajlanlawexperts.com",
-      },
-      {
         slug: "sadeem-subhani",
         img: l5,
         name: t("team_member_5_name"),
         role: t("team_member_5_role"),
         email: "s.sabhani@ajlanlawexperts.com",
+      },
+      {
+        slug: "abdulrahman-alamoudi",
+        img: l6,
+        name: t("team_member_6_name"),
+        role: t("team_member_6_role"),
+        email: "a.alamoudi@ajlanlawexperts.com",
       },
       {
         img: l9,
@@ -175,7 +175,7 @@ export const Team = () => {
           </div>
 
           {/* حاوية الصورة: معزولة ومستقلة تماماً في المنتصف (items-center) لضمان ثبات التمركز بالملي */}
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center mb-12">
             <div className="w-full max-w-[400px]">
               {teamData.leader.map((m, i) => (
                 <MemberCard key={i} m={m} slug={m.slug} isLeader={true} />
@@ -193,7 +193,7 @@ export const Team = () => {
             </div>
 
             {/* 🟢 جعلنا الشبكة مرنة flex وتتوسط الصفحة، وأعطينا كل كرت حجم يدوي ثابت max-w-[224px] لتوحيد المقاس */}
-            <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto mb-12">
               {teamData.management.map((m, i) => (
                 <div key={i} className="w-full max-w-[224px]">
                   <MemberCard m={m} slug={m.slug} />

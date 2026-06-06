@@ -79,16 +79,20 @@ export const translations = {
     team_member_1_name: "Mr. Mohammed Abdullah Ajlan",
     team_member_1_role: "Founding Partner & General Manager",
     team_member_1_qualifications_text:
-      "Bachelor of Laws, Damascus University, Syria (1980-1986)\nMaster of Laws (LL.M), Boston University, USA (1989-1991)",
+      "Bachelor of Laws (LL.B), Damascus University, Syrian Arab Republic (1980-1986) of law, emphasizing the importance of legal ethics and professionalism.\nMaster of Laws (LL.M), Boston University College of Law, Specialized in international law and comparative law, enhancing Mohammed's ability to understand and apply legal concepts in a global context.",
 
-    team_member_1_experience_text:
-      "Mr. Mohammed Ajlan has over 30 years of experience in the field of Saudi law and legal consultations, which makes him a trusted reference in this field.",
+    team_member_1_speech_title: "ABOUT",
+    team_member_1_speech_text:
+      "Mohammed Abdullah Ajlan is a highly experienced legal professional with over 30 years of extensive practice in Saudi Arabian law and legal consulting. A commitment to providing outstanding legal advice and solutions across a variety of sectors has marked this career, including government, corporate, and private sectors. Throughout his career, Mohammed has served as a trusted legal advisor to governmental ministries and prominent corporations, and contributed to formulating and implementing comprehensive legal strategies that take into account local regulatory requirements and international standards.\nAs the Founder and Managing Director of Mohammed Ajlan Advocates and Legal Consultants, established in 1993, has cultivated an environment of excellence and integrity within the firm. The firm prides itself on its ability to address a diverse range of legal matters, facilitating comprehensive services for clients in both Arabic and English. Mohammed's team comprises seasoned consultants and legal experts who share his commitment to delivering high-quality legal services.",
 
-    team_member_1_specialization_text:
-      "His expertise covers commercial law, maritime law, oil and gas law, labor law, Islamic Sharia, real estate, and litigation before the Board of Grievances.",
+    team_member_1_achievements_title: "Professional Associations",
+    team_member_1_achievements_text:
+      "Saudi Bar Association: Active member, participating in various legal forums and workshops to stay updated on the latest developments in the legal field.\nInternational Bar Association (IBA): Engaged member, fostering connections with legal professionals worldwide to enhance collaboration and knowledge sharing.",
 
-    team_member_1_languages_text:
-      "Mr. Ajlan is fluent in both Arabic (mother tongue) and English.",
+    team_member_1_values_title: "Personal Commitment",
+    team_member_1_values_text:
+      "Mohammed Abdullah Ajlan is passionate about upholding justice and ensuring that all clients receive fair and effective legal representation. Mohammed believes in the importance of continuous professional development and regularly seeks opportunities to expand his expertise and knowledge in the ever-evolving field of law. Mohammed’s commitment to integrity, confidentiality, and diligence remains the hallmark of the practice, strives to be a reliable ally for clients in navigating their legal challenges.",
+
     //member2
     team_member_2_name: "Mr. Osama Al-Johary",
     team_member_2_role: "Legal Consultant",
@@ -100,9 +104,6 @@ export const translations = {
 
     team_member_2_specialization_text:
       "Providing legal advice on all presented issues.\nStudying cases and drafting statements of claim of all kinds.\nPreparing memoranda and statements of appeal and petitions in various cases.\nDrafting contracts and agreements of all kinds, studying their texts, interpreting them, and expressing a legal opinion on them and what may be contrary to the provisions of the laws or regulations in force in the Kingdom or with the rules of public law.\nPreparing grievance memoranda and appealing administrative decisions before the competent authorities.\nPreparing and reviewing internal regulations and employee affairs regulations to comply with the labor and workers’ system and its executive regulations and related instructions and circulars.\nDrafting texts of circulars and administrative models, acknowledgments, undertakings, and final settlements.\nIncorporating companies and registering agencies and trademarks of all kinds.\nPreparing and reviewing inheritance division contracts and judicial division contracts.",
-
-    team_member_2_languages_text:
-      "Fluent in both Arabic (mother tongue) and English.",
 
     //member3
     team_member_3_name: "Mr. Mohammed Erfan",
@@ -158,9 +159,6 @@ export const translations = {
       "4 years of experience\nLawyer at the office of Mohammed Abdullah Ajlan for Legal Consultations and Advocacy\nLegal representative at Al-Jarsah Foundation for Security Services and Guards\nLegal representative at Emdad Al-Tasheed for Trading Company\nLegal representative at Isnad Al-Omran for Contracting Company\nLegal representative at Shumookh Al-Masah Real Estate Company",
 
     team_member_6_specialization_text: "", // 👈 تركناه فارغاً تماماً لكي يختفي هذا التصنيف بالكامل من واجهة الموظف 6 بفضل كود الحماية الذكي
-
-    team_member_6_languages_text:
-      "Mr. Abdulrahman Al-Amoudi is fluent in both Arabic (mother tongue) and English.",
 
     team_member_7_name: "Mr. Nedal Bamejally",
     team_member_7_role: "Administrative Assistant",
@@ -282,14 +280,20 @@ export const translations = {
     team_member_1_role: "الشريك المؤسس والمدير العام",
     // اكتب كل المؤهلات هنا في سطر واحد وافصل بينها بـ \n (اضغط Enter)
     team_member_1_qualifications_text:
-      "بكالوريوس القانون، جامعة دمشق، سوريا (1980-1986).\n ماجستير القانون (LL.M)، جامعة بوسطن، الولايات المتحدة الأمريكية (1989-1991).",
-    // هنا يمكنك زيادة الخبرات إلى 5 أو 6 أسطر كما تطلب، والواجهة ستعرضها تلقائياً بالكامل!
-    team_member_1_experience_text:
-      "يتمتع الأستاذ محمد عجلان بخبرة تتجاوز 30 عامًا في مجال القانون السعودي والاستشارات القانونية، مما يجعله مرجعًا موثوقًا في هذا المجال.",
-    team_member_1_specialization_text:
-      "القانون التجاري\n القانون البحري\n قانون النفط والغاز\n قانون العمل\nالشريعة الإسلامية\n العقارات\n والتقاضي أمام ديوان المظالم.",
-    team_member_1_languages_text:
-      " يتقن الأستاذ عجلان اللغتين العربية (لغة أم), والإنجليزية بطلاقة تامة.",
+      "بكالوريوس القانون من جامعة دمشق، وهي مؤسسة أكاديمية مرموقة ومعترف بها دوليًا.\n	ماجستير القانون من جامعة بوسطن الأمريكية، إحدى الجامعات الرائدة عالميًا في الدراسات القانونية.",
+
+    team_member_1_speech_title: "نبذة تعريفية",
+    team_member_1_speech_text:
+      "يمتلك الأستاذ/ محمد عبد الله عجلان خبرة قانونية تمتد لأكثر من 30 عامًا في مجال المحاماة والاستشارات القانونية داخل المملكة العربية السعودية. وقد تميزت مسيرته المهنية بالالتزام بالمعايير المهنية العليا وتقديم حلول قانونية مبتكرة لمجموعة واسعة من القطاعات تشمل الجهات الحكومية، الشركات الكبرى، والقطاع الخاص.\nعلى مدار مسيرته، شغل أدوارًا محورية كمستشار قانوني لوزارات وهيئات وشركات كبرى، وأسهم في صياغة وتنفيذ استراتيجيات قانونية متكاملة تراعي المتطلبات التنظيمية المحلية والمعايير الدولية.\nبصفته المؤسس والمدير العام لمكتب عجلان للمحاماة (تأسس عام 1993)، بنى سمعة مهنية قائمة على النزاهة والتميز، تفخر الشركة بقدرتها على التعامل مع مجموعة متنوعة من المسائل القانونية، مما يسهل تقديم خدمات شاملة للعملاء باللغتين العربية والإنجليزية. فريق محمد يتألف من مستشارين وخبراء قانونيين متمرسين يشاركونه التزامه بتقديم خدمات قانونية عالية الجودة.",
+
+    team_member_1_achievements_title: "العضويات المهنية",
+    team_member_1_achievements_text:
+      "الهيئة السعودية للمحامين: عضو نشط ومشارك في المنتديات وورش العمل القانونية.\nنقابة المحامين الدولية (IBA): عضو منخرط يعزز التعاون مع المهنيين القانونيين عالمياً.",
+
+    team_member_1_values_title: "القيم والالتزام المهني",
+    team_member_1_values_text:
+      "يؤمن الأستاذ/ محمد عبد الله عجلان أن العدالة والشفافية أساس النجاح المهني، ويحرص على تمثيل عملائه بأعلى مستويات الكفاءة والنزاهة. كما يلتزم بالتطوير المستمر والاطلاع على أحدث المستجدات القانونية لضمان تقديم حلول قانونية مبتكرة وفعّالة تلبي احتياجات شركائه وعملائه.\nيظل التزام محمد بالنزاهة والسرية والاجتهاد هو السمة المميزة للممارسة، ويسعى لأن يكون حليفًا موثوقًا للعملاء في مواجهة تحدياتهم القانونية.",
+
     team_member_2_name: "الأستاذ /  أسامة الجوهري",
     team_member_2_role: "مستشار قانوني",
     team_member_2_qualifications_text:
@@ -298,8 +302,7 @@ export const translations = {
       " مدة خبرة قدرها أربعة عشرة عاماً بالمحاماة في المملكة العربية السعودية.\nالعمل لدى مكتب محاماة بجمهورية مصر العربية. \nمستشار قانوني لدى مكتب محمد عبدالله عجلان للمحاماة والإستشارات القانونية.",
     team_member_2_specialization_text:
       "تقديم الإستشارات القانونية في كافة المسائل المطروحة.\nدراسة القضايا وصياغة لوائح الدعاوى بمختلف أنواعها.\nإعداد المذكرات واللوائح الاعتراضية والالتماسات في القضايا المختلفة.\nصياغة العقود والاتفاقيات بمختلف أنواعها ودارسة نصوص العقود والاتفاقيات وتفسيرها وإبداء الرأي القانوني حولها وحول ما يتعارض من نصوصها مع أحكام الشرع أو الأنظمة الواجبة التطبيق بالمملكة أو مع قواعد القانون العام .\nإعداد مذكرات التظلم والطعن على القرارات الإدارية أمام الجهات المختصة.\nإعداد ومراجعة اللوائح الإدارية ولوائح شئون العاملين والمساعدة في تسوية الخلافات العمالية بما يتماشى مع نظام العمل والعمال ولائحته التنفيذية والتعليمات والتعاميم ذات العلاقة.\nصياغة نصوص التعاميم والنماذج الإدارية والمخالصات والتعهدات والإقرارات بوجه عام.\nتأسيس الشركات وتسجيل الوكالات والعلامات التجارية بمختلف أنواعها.\nإعداد ومراجعة قسمة التركات وعقود القسمة الرضائية.",
-    team_member_2_languages_text:
-      "يتقن اللغتين العربية (لغة أم)، والإنجليزية بطلاقة تامة.",
+
     team_member_3_name: "الأستاذ / محمد عرفان",
     team_member_3_role: "مستشار قانوني",
     team_member_3_qualifications_text:
@@ -344,7 +347,7 @@ export const translations = {
     team_member_6_qualifications_text:
       "بكالوريوس الدراسات الإسلامية والانظمة بجامعة ام القرى في عام ٢٠٢١م .\nتطبيقات متقدمة في الاوقاف والتركات، مركز التدريب العدلي.\nشهادة البحث القانوني، مركز التدريب العدلي.\nتطبيقات متقدمة في العقود، مركز التدريب العدلي.\nتطبيقات متقدمة في القضايا الإدارية، مركز التدريب العدلي.\nتطبيقات متقدمة في القضايا الحقوقية، مركز التدريب العدلي.\nربط الدلالات الاصولية بالانظمة، مركز التدريب العدلي.\nتطبيقات متقدمة في المنازعات العمالية، مركز التدريب العدلي.\nتطبيقات متقدمة في القضايا الجزائية، مركز التدريب العدلي.\nنظام مكافحة جرائم غسيل الاموال، مركز التدريب العدلي.\nتطبيقات متقدمة في القضايا التجارية، مركز التدريب العدلي.\nشهادة الاختصاص القضائي، المؤسسة العامة للتدريب التقني والمهني.\nشهادة الصياغه القانونية، المؤسسة العامة للتدريب التقني والمهني.",
     team_member_6_experience_text:
-      "محامي لدى مكتب محمد عبدالله عجلان للمحاماة والإستشارات القانونية.\nممثل قانوني لدى مؤسسة الجرسة للحراسات والخدمات الأمنية.\nممثل قانوني لدى شركة امداد التشييد للتجارة.\nممثل قانوني لدى شركة إسناد العمران للمقاولات.\nممثل قانوني لدى شركة شموخ الماسة العقارية.",
+      " خبرة 4 أعوام  \n محامي لدى مكتب محمد عبدالله عجلان للمحاماة والإستشارات القانونية.\nممثل قانوني لدى مؤسسة الجرسة للحراسات والخدمات الأمنية.\nممثل قانوني لدى شركة امداد التشييد للتجارة.\nممثل قانوني لدى شركة إسناد العمران للمقاولات.\nممثل قانوني لدى شركة شموخ الماسة العقارية.",
     team_member_7_name: " الاستاذ / نضال بامجلي",
     team_member_7_role: "مساعد إداري ",
     team_member_8_name: "الاستاذ / حسن عبدالكريم",
